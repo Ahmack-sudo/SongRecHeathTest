@@ -936,7 +936,7 @@ pub fn gui_main(recording: bool, input_file: Option<&str>, enable_mpris_cli: boo
         // Don't forget to make all widgets visible.
         
      //   main_window.show_all();
-recognized_song_cover.show();
+recognized_song_cover.show()
         );
         results_frame.hide();
         
