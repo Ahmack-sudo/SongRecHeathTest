@@ -935,7 +935,7 @@ pub fn gui_main(recording: bool, input_file: Option<&str>, enable_mpris_cli: boo
 
         // Don't forget to make all widgets visible.
         
-        main_window.show_all();
+     //   main_window.show_all();
 
         results_frame.hide();
         
