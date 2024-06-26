@@ -495,15 +495,15 @@ Contributors https://github.com/marin-m/SongRec/graphs/contributors</property>
                               <object class="GtkAlignment">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
-                                <property name="left-padding">12</property>
+                                <property name="left-padding">1</property>
                                 <child>
                                   <object class="GtkBox">
                                     <property name="visible">True</property>
                                     <property name="can-focus">False</property>
-                                    <property name="margin-left">15</property>
-                                    <property name="margin-right">15</property>
-                                    <property name="margin-top">15</property>
-                                    <property name="margin-bottom">15</property>
+                                    <property name="margin-left">1</property>
+                                    <property name="margin-right">1</property>
+                                    <property name="margin-top">1</property>
+                                    <property name="margin-bottom">1</property>
                                     <property name="orientation">vertical</property>
                                     <property name="spacing">15</property>
                                     <child>
