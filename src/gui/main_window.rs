@@ -757,14 +757,14 @@ pub fn gui_main(recording: bool, input_file: Option<&str>, enable_mpris_cli: boo
                     favorites_interface.remove(song_record);
                 },
                 ShowFavorites => {
-                    favorites_window.show_all();
+                    favorites_window.hide();
                 },
                 ErrorMessage(string) => {
                    if !(string == gettext("No match for this song") && microphone_stop_button.is_visible()) {
                        let dialog = gtk::MessageDialog::new(Some(&main_window),
                           gtk::DialogFlags::MODAL, gtk::MessageType::Error, gtk::ButtonsType::Ok, &string);
                        dialog.connect_response(|dialog, _| dialog.close());
-                   //     dialog.show_all();
+                   //     dialog.hide();
                     }
                 },
                 NetworkStatus(network_is_reachable) => {
@@ -839,8 +839,8 @@ pub fn gui_main(recording: bool, input_file: Option<&str>, enable_mpris_cli: boo
                                 device_name.to_owned()
                             )).unwrap();
                             
-                            microphone_stop_button.show();
-                            current_volume_hbox.show();
+                            microphone_stop_button.hide();
+                            current_volume_hbox.hide();
                             microphone_button.hide();
                         }
                     }
@@ -935,8 +935,8 @@ pub fn gui_main(recording: bool, input_file: Option<&str>, enable_mpris_cli: boo
 
         // Don't forget to make all widgets visible.
         
-        main_window.show_all();
-
+     //   main_window.show_all();
+recognized_song_cover.show();
         results_frame.hide();
         
         recognize_from_my_speakers_checkbox.hide(); // This will be available only of PulseAudio is up and controllable
