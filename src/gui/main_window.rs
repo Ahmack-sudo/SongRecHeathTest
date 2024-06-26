@@ -760,10 +760,10 @@ pub fn gui_main(recording: bool, input_file: Option<&str>, enable_mpris_cli: boo
                     favorites_window.show_all();
                 },
                 ErrorMessage(string) => {
-               //     if !(string == gettext("No match for this song") && microphone_stop_button.is_visible()) {
-                    //    let dialog = gtk::MessageDialog::new(Some(&main_window),
-                  //          gtk::DialogFlags::MODAL, gtk::MessageType::Error, gtk::ButtonsType::Ok, &string);
-                //        dialog.connect_response(|dialog, _| dialog.close());
+                   if !(string == gettext("No match for this song") && microphone_stop_button.is_visible()) {
+                       let dialog = gtk::MessageDialog::new(Some(&main_window),
+                          gtk::DialogFlags::MODAL, gtk::MessageType::Error, gtk::ButtonsType::Ok, &string);
+                       dialog.connect_response(|dialog, _| dialog.close());
                    //     dialog.show_all();
                     }
                 },
