@@ -935,9 +935,9 @@ pub fn gui_main(recording: bool, input_file: Option<&str>, enable_mpris_cli: boo
 
         // Don't forget to make all widgets visible.
         
-     //   main_window.show_all();
+        main_window.show_all();
 
-        results_frame.show();
+        results_frame.hide();
         
         recognize_from_my_speakers_checkbox.hide(); // This will be available only of PulseAudio is up and controllable
 
